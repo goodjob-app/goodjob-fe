@@ -2,40 +2,9 @@
   <head>
     <title>Good Job</title>
     <style>
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: "Trebuchet MS", sans-serif;
-      }
-      header {
-        background-color: #fcdd01;
-        color: black;
-        padding: 10px;
-        text-align: center;
-      }
-      main {
-        display: flex;
-        justify-content: space-between;
-      }
-      article {
-        padding: 20px;
-      }
-      #content {
-        flex-grow: 1;
-        margin-right: 20px;
-        margin-bottom: 20px;
-      }
-      footer {
-        background-color: #fcdd01;
-        color: black;
-        padding: 5px;
-        text-align: center;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-      }
     </style>
   </head>
+  <link rel="stylesheet" href="src/styles/styles.css">
   <body>
     <header>
       <h1>Good Job</h1>
@@ -48,9 +17,6 @@
         <article>
           <h1>Enter your skills!</h1>
           <form id="skillForm" class="skill-form" enctype="multipart/form-data">
-            <p>
-              Input your skills
-            </p>
             <input id="skillInput"/>
 
             <div class="submit-form">
@@ -58,7 +24,9 @@
             </div>
           </form>
           <div class="result-container">
-            <div class="loading"></div>
+            <div class="loading">
+              <img src="src/images/buffering.gif" width="100" height="100">
+            </div>
             <p id="recommendError"></p>
             <div id="result"></div>
           </div>

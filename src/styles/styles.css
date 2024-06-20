@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+header {
+    background-color: #fdee80;
+    color: black;
+    padding: 10px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+article {
+    padding: 20px;
+}
+
+#content {
+    flex-grow: 1;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #fdee80;
+    color: black;
+    padding: 5px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.response-message {
+    display: flex;
+    align-items: center;
+    background: #e6ffe6;
+    border: 1px solid #33cc33;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.response-message .fas {
+    color: #33cc33;
+    margin-right: 10px;
+}
+
+.response-message .message {
+    font-size: 16px;
+    color: black;
+}
+
+.recommendation-result {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+.recommendation-result .result-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black;
+}
+.recommendation-result .job-item {
+    font-size: 16px;
+    color: black;
+    margin: 5px 0;
+    padding: 10px;
+    background: #fdee80;
+    border: 1px solid #bcbc01;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.recommendation-result .job-item:hover {
+    background: white;
+}

@@ -6,6 +6,8 @@ const result = document.querySelector('.result-container #result');
 
 const skillFormFormData = new FormData();
 
+hideElement(loadingRecommend);
+
 ['submit'].forEach((eventName) => {
   skillForm.addEventListener(eventName, preventDefaults, false);
 });
@@ -52,16 +54,16 @@ function showRecommendResult(response) {
     <div class="recommendation-result">
       <div>
         <div class="result-title">Result:</div>
-        <div>${data.jobs[0]}</div>
-        <div>${data.jobs[1]}</div>
-        <div>${data.jobs[2]}</div>
-        <div>${data.jobs[3]}</div>
-        <div>${data.jobs[4]}</div>
-        <div>${data.jobs[5]}</div>
-        <div>${data.jobs[6]}</div>
-        <div>${data.jobs[7]}</div>
-        <div>${data.jobs[8]}</div>
-        <div>${data.jobs[9]}</div>
+        <div class="job-item">${data.jobs[0]}</div>
+        <div class="job-item">${data.jobs[1]}</div>
+        <div class="job-item">${data.jobs[2]}</div>
+        <div class="job-item">${data.jobs[3]}</div>
+        <div class="job-item">${data.jobs[4]}</div>
+        <div class="job-item">${data.jobs[5]}</div>
+        <div class="job-item">${data.jobs[6]}</div>
+        <div class="job-item">${data.jobs[7]}</div>
+        <div class="job-item">${data.jobs[8]}</div>
+        <div class="job-item">${data.jobs[9]}</div>
       </div>
     </div>
   `;
