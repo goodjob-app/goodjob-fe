@@ -46,6 +46,11 @@ async function submitSkill(formData) {
 function showRecommendResult(response) {
   const { message, data } = response;
 
+  let jobItems = '';
+  for (let i = 0; i < data.jobs.length; i++) {
+    jobItems += `<div class="job-item">${data.jobs[i]}</div>`;
+  }
+
   result.innerHTML = `
     <div class="response-message">
       <i class="fas fa-check"></i>
@@ -54,16 +59,7 @@ function showRecommendResult(response) {
     <div class="recommendation-result">
       <div>
         <div class="result-title">Result:</div>
-        <div class="job-item">${data.jobs[0]}</div>
-        <div class="job-item">${data.jobs[1]}</div>
-        <div class="job-item">${data.jobs[2]}</div>
-        <div class="job-item">${data.jobs[3]}</div>
-        <div class="job-item">${data.jobs[4]}</div>
-        <div class="job-item">${data.jobs[5]}</div>
-        <div class="job-item">${data.jobs[6]}</div>
-        <div class="job-item">${data.jobs[7]}</div>
-        <div class="job-item">${data.jobs[8]}</div>
-        <div class="job-item">${data.jobs[9]}</div>
+        ${jobItems}
       </div>
     </div>
   `;
