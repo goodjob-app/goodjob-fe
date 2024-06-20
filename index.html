@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <title>Good Job</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Trebuchet MS", sans-serif;
+      }
+      header {
+        background-color: #fcdd01;
+        color: black;
+        padding: 10px;
+        text-align: center;
+      }
+      main {
+        display: flex;
+        justify-content: space-between;
+      }
+      article {
+        padding: 20px;
+      }
+      #content {
+        flex-grow: 1;
+        margin-right: 20px;
+        margin-bottom: 20px;
+      }
+      footer {
+        background-color: #fcdd01;
+        color: black;
+        padding: 5px;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Good Job</h1>
+      <p>
+        Help job seekers find jobs using AI
+      </p>
+    </header>
+    <main>
+      <div id="content">
+        <article>
+          <h1>Enter your skills!</h1>
+          <form id="skillForm" class="skill-form" enctype="multipart/form-data">
+            <p>
+              Input your skills
+            </p>
+            <input id="skillInput"/>
+
+            <div class="submit-form">
+              <button class="btn" value="recommend">Recommend</button>
+            </div>
+          </form>
+          <div class="result-container">
+            <div class="loading"></div>
+            <p id="recommendError"></p>
+            <div id="result"></div>
+          </div>
+        </article>
+      </div>
+      <aside>
+        <img src="src/images/goodjob.png" width="300" height="300">
+      </aside>
+    </main>
+    <footer>
+      Made by: C241-PR590
+    </footer>
+    <script src="src/scripts/utils.js"></script>
+    <script src="src/scripts/api.js"></script>
+    <script src="src/scripts/main.js"></script>
+  </body>
+</html>
