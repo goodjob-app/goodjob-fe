@@ -1,5 +1,7 @@
 const skillForm = document.getElementById('skillForm');
 
+const skillCardsContainer = document.querySelector('#skillCardsContainer');
+
 const searchBar = document.querySelector('#searchBar');
 
 const skillDropdown = document.querySelector('#skillForm #skillDropdown');
@@ -50,8 +52,36 @@ skillDropdown.addEventListener('change', function() {
   updateSkills();
 });
 
+function removeSkill(skill) {
+  skillInput.splice(skillInput.indexOf(skill), 1);
+  updateSkills();
+}
+
 function updateSkills() {
+  skillCardsContainer.innerHTML = ``;
   skillInput.sort();
+  for (let skill of skillInput) {
+    const card = document.createElement('div');
+    card.classList.add('skill-card');
+
+    const content = document.createElement('div');
+    content.classList.add('skill-card-content');
+
+    const skillName = document.createElement('span');
+    skillName.textContent = skill;
+
+    const deleteButton = document.createElement('span');
+    deleteButton.textContent = '❌';
+    deleteButton.classList.add('delete-button');
+    deleteButton.addEventListener('click', () => {
+        removeSkill(skill);
+    });
+
+    content.appendChild(skillName);
+    content.appendChild(deleteButton);
+    card.appendChild(content);
+    skillCardsContainer.appendChild(card);
+  }
 }
 
 skillForm.addEventListener('submit', skillFormFormSubmitHandler);
