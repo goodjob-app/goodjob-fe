@@ -71,7 +71,7 @@ function updateSkills() {
     skillName.textContent = skill;
 
     const deleteButton = document.createElement('span');
-    deleteButton.textContent = '×';
+    deleteButton.textContent = 'X';
     deleteButton.classList.add('delete-button');
     deleteButton.addEventListener('click', () => {
         removeSkill(skill);
