@@ -89,8 +89,8 @@ skillForm.addEventListener('submit', skillFormFormSubmitHandler);
 function skillFormFormSubmitHandler() {
   let skillString = skillInput.join(" ");
   console.log(skillString);
-  skillFormFormData.set("skills", skillString);
-  submitSkill(skillFormFormData);
+  const data = { skills: skillString }; 
+  submitSkill(data);
 }
 
 async function submitSkill(formData) {

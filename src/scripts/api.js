@@ -8,7 +8,10 @@ class RecommendAPI {
   static async recommend(data) {
     const response = await fetch(ENDPOINT.recommend, {
       method: 'POST',
-      body: data,
+      body: JSON.stringify(data), 
+      headers: {
+        'Content-Type': 'application/json', 
+      },
       redirect: 'follow',
     });
 
